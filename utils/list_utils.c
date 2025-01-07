@@ -6,7 +6,7 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:59:16 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 17:31:00 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 18:12:46 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_list	*ft_lstlast(t_list *lst)
 	return (last);
 }
 
-void	ft_lstaddback(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 

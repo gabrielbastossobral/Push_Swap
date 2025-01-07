@@ -6,7 +6,7 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:48:32 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 17:45:27 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 18:13:04 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void		index_stack(t_list **stack);
 
 t_list		*ft_new_node(int value, int index);
 t_list		*ft_lstlast(t_list *lst);
-void		ft_lstaddback(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
 void		ft_print_list(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
