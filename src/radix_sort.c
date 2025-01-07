@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:14:00 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 13:48:25 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:30:21 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 int	get_max(t_list *stack)
 {

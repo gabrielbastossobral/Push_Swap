@@ -6,9 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:54:37 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 16:54:43 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:30:51 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/push_swap.h"
 
 static int	ft_contains(int num, char **argv, int i)
 {

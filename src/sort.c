@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:43:08 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 15:54:12 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:30:34 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	simple_sort(t_list **stack_a, t_list **stack_b)
 {

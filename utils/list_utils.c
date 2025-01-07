@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:59:16 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 12:15:39 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:31:00 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 t_list	*ft_new_node(int value, int index)
 {

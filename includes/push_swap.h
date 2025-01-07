@@ -6,14 +6,14 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:48:32 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 16:55:23 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:45:27 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct s_list
 {
@@ -59,6 +59,8 @@ t_list		*ft_lstlast(t_list *lst);
 void		ft_lstaddback(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
 void		ft_print_list(t_list *lst);
+void		ft_lstadd_back(t_list **lst, t_list *new);
+t_list		*ft_lstnew(int value);
 
 void		ft_error(char *msg);
 void		ft_free(char **str);

@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:01:31 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 16:22:28 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:30:55 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 static	t_list	*get_next_min(t_list **stack)
 {

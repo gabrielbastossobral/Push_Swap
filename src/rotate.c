@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:52:31 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 12:23:07 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:30:28 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 int	rotate(t_list **stack)
 {

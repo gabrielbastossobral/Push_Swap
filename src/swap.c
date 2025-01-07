@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:47:58 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 12:50:45 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:30:38 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 int	swap(t_list **stack)
 {

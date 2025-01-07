@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:29:10 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 16:37:50 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:31:03 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_error(char *msg)
 {

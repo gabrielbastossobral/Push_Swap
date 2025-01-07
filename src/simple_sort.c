@@ -6,11 +6,11 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:43:41 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 15:53:03 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/07 17:30:31 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 int	find_min_index(t_list *stack)
 {
