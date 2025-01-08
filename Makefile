@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+         #
+#    By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 17:04:56 by gabrielsobr       #+#    #+#              #
-#    Updated: 2025/01/07 18:07:36 by gabrielsobr      ###   ########.fr        #
+#    Updated: 2025/01/08 09:57:11 by gabastos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ UTILS = $(UTIDIR)/check_args.c \
 OBJS_UTILS = $(UTILS:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I$(INCDIR) -I$(LIBDIR)
+CFLAGS = -Wall -Wextra -Werror -g -I$(INCDIR) -I$(LIBDIR)
 
 RM = rm -f
 

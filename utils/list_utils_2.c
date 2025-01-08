@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_utils_2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
+/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:43:39 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 17:44:15 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/08 10:43:14 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ t_list	*ft_lstnew(int value)
 
 	new = (t_list *) malloc(sizeof(*new));
 	if (!new)
+	{
+		free(new);
 		return (NULL);
+	}
 	new->value = value;
 	new->index = -1;
 	new->next = NULL;

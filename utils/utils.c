@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
+/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:29:10 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 17:31:03 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/08 10:48:47 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ void	ft_free(char **str)
 
 	i = 0;
 	while (str[i])
-		i++;
-	while (i >= 0)
-		free(str[i--]);
+		free(str[i++]);
+	free(str);
 }
 
 int	is_sorted(t_list **stack)

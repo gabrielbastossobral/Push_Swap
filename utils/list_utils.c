@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
+/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:59:16 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 18:12:46 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/08 10:54:31 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_new_node(int value, int index)
 {
 	t_list	*node;
 
-	node = malloc(sizeof(t_list));
+	node = (t_list *)malloc(sizeof(*node));
 	if (!node)
 		return (NULL);
 	node->value = value;
