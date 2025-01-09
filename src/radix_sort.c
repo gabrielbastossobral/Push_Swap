@@ -3,61 +3,57 @@
 /*                                                        :::      ::::::::   */
 /*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
+/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:14:00 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 17:30:21 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/09 11:55:18 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	get_max(t_list *stack)
+static int	get_max_bits(t_list **stack)
 {
-	int	max;
+	t_list	*head;
+	int		max;
+	int		max_bits;
 
-	max = stack->index;
-	while (stack)
+	head = *stack;
+	max = head->index;
+	max_bits = 0;
+	while (head)
 	{
-		if (stack->index > max)
-			max = stack->index;
-		stack = stack->next;
+		if (head->index > max)
+			max = head->index;
+		head = head->next;
 	}
-	return (max);
-}
-
-int	get_max_bits(int max)
-{
-	int	bits;
-
-	bits = 0;
-	while ((max >> bits) != 0)
-		bits++;
-	return (bits);
+	while ((max >> max_bits) != 0)
+		max_bits++;
+	return (max_bits);
 }
 
 void	radix_sort(t_list **stack_a, t_list **stack_b)
 {
-	int	max;
-	int	max_bits;
-	int	i;
-	int	j;
-	int	size;
+	t_list	*head_a;
+	int		i;
+	int		j;
+	int		size;
+	int		max_bits;
 
-	max = get_max(*stack_a);
-	max_bits = get_max_bits(max);
-	size = ft_lstsize(*stack_a);
 	i = 0;
+	head_a = *stack_a;
+	size = ft_lstsize(head_a);
+	max_bits = get_max_bits(stack_a);
 	while (i < max_bits)
 	{
 		j = 0;
-		while (j < size)
+		while (j++ < size)
 		{
-			if ((((*stack_a)->index >> i) & 1) == 1)
+			head_a = *stack_a;
+			if (((head_a->index >> i) & 1) == 1)
 				ra(stack_a);
 			else
 				pb(stack_a, stack_b);
-			j++;
 		}
 		while (ft_lstsize(*stack_b) != 0)
 			pa(stack_a, stack_b);

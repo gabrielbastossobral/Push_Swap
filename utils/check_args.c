@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
+/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:54:37 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 17:30:51 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/09 11:17:45 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

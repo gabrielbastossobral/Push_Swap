@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
+/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:43:41 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 17:30:31 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/09 13:40:47 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -6,7 +6,7 @@
 /*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:48:32 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/08 14:19:17 by gabastos         ###   ########.fr       */
+/*   Updated: 2025/01/09 13:41:33 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ void		ft_error(char *msg);
 void		ft_free(char **str);
 int			is_sorted(t_list **stack);
 void		free_stack(t_list **stack);
+int			get_distance(t_list **stack, int index);
+void		make_top(t_list **stack, int distance);
 
 void		ft_check_args(int argc, char **argv);
 

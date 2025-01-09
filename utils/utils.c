@@ -6,7 +6,7 @@
 /*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:29:10 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/08 14:19:08 by gabastos         ###   ########.fr       */
+/*   Updated: 2025/01/09 13:44:07 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	free_stack(t_list **stack)
 
 	if (!stack || !*stack)
 	{
+		free(stack);
 		return ;
 	}
 	head = *stack;
