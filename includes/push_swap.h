@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
+/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:48:32 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/07 18:13:04 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/08 14:19:17 by gabastos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
