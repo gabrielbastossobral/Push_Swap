@@ -6,7 +6,7 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:48:32 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/10 13:03:36 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/10 15:49:47 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ void		ft_print_list(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 t_list		*ft_lstnew(int value);
 
-void		ft_error(char *msg);
 void		ft_free(char **str);
+void		ft_error(char **args, int should_free);
 int			is_sorted(t_list **stack);
 void		free_stack(t_list **stack);
 int			get_distance(t_list **stack, int index);

@@ -6,27 +6,36 @@
 /*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:29:10 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/10 12:17:35 by gabrielsobr      ###   ########.fr       */
+/*   Updated: 2025/01/10 15:47:51 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_error(char *msg)
+void	ft_error(char **args, int should_free)
 {
-	ft_putendl_fd(msg, 1);
-	exit(0);
+	if (should_free)
+		ft_free(args);
+	write(2, "Error\n", 6);
+	exit(EXIT_FAILURE);
 }
 
 void	ft_free(char **str)
 {
 	int	i;
 
+	if (!str)
+		return ;
 	i = 0;
 	while (str[i])
 		i++;
+	i--;
 	while (i >= 0)
-		free(str[i--]);
+	{
+		free(str[i]);
+		i--;
+	}
+	free(str);
 }
 
 int	is_sorted(t_list **stack)

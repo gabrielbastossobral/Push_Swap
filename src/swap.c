@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:47:58 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/09 13:47:14 by gabastos         ###   ########.fr       */
+/*   Updated: 2025/01/10 14:51:46 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	swap(t_list **stack)
 	head = *stack;
 	next = head->next;
 	if (!head && !next)
-		ft_error("Error occured while swapping!");
+	{
+		write(2, "Error\n", 6);
+		exit(EXIT_FAILURE);
+	}
 	tmp_val = head->value;
 	tmp_index = head->index;
 	head->value = next->value;
