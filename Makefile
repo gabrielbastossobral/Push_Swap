@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+         #
+#    By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 17:04:56 by gabrielsobr       #+#    #+#              #
-#    Updated: 2025/01/08 09:57:11 by gabastos         ###   ########.fr        #
+#    Updated: 2025/01/10 12:59:13 by gabrielsobr      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

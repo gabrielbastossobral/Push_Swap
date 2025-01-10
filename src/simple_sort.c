@@ -3,91 +3,96 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:43:41 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/09 13:40:47 by gabastos         ###   ########.fr       */
+/*   Updated: 2025/01/10 13:04:05 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	find_min_index(t_list *stack)
+static int	get_min(t_list **stack, int val)
 {
-	int	min;
+	t_list	*head;
+	int		min;
 
-	if (!stack)
-		return (-1);
-	min = stack->index;
-	while (stack)
+	head = *stack;
+	min = head->index;
+	while (head->next)
 	{
-		if (stack->index < min)
-			min = stack->index;
-		stack = stack->next;
+		head = head->next;
+		if ((head->index < min) && head->index != val)
+			min = head->index;
 	}
 	return (min);
 }
 
-void	bring_index_to_top(t_list **stack, int index)
+static void	execute_sort_case(t_list **stack_a, int case_id, int min)
 {
-	int		size;
-	int		position;
-	t_list	*current;
-
-	size = ft_lstsize(*stack);
-	position = 0;
-	current = *stack;
-	while (current && current->index != index)
+	if (case_id == 1)
 	{
-		position++;
-		current = current->next;
+		ra(stack_a);
+		sa(stack_a);
+		rra(stack_a);
 	}
-	if (position <= size / 2)
-		while (position-- > 0)
-			ra(stack);
-	else
+	else if (case_id == 2)
 	{
-		position = size - position;
-		while (position-- > 0)
-			rra(stack);
+		if ((*stack_a)->next->index == min)
+			sa(stack_a);
+		else
+			rra(stack_a);
+	}
+	else if (case_id == 3)
+	{
+		if ((*stack_a)->next->index == min)
+			ra(stack_a);
+		else
+		{
+			sa(stack_a);
+			rra(stack_a);
+		}
 	}
 }
 
 void	sort_3(t_list **stack_a)
 {
-	int	first;
-	int	second;
-	int	third;
+	int	min;
+	int	next_min;
+	int	case_id;
 
-	if (ft_lstsize(*stack_a) != 3)
+	if (is_sorted(stack_a))
 		return ;
-	first = (*stack_a)->index;
-	second = (*stack_a)->next->index;
-	third = (*stack_a)->next->next->index;
-	if (first > second && second < third && first < third)
-		sa(stack_a);
-	else if (first > second && second > third)
-	{
-		sa(stack_a);
-		rra(stack_a);
-	}
-	else if (first > second && second < third && first > third)
-		rra(stack_a);
-	else if (first < second && second > third && first < third)
-	{
-		sa(stack_a);
-		ra(stack_a);
-	}
-	else if (first < second && second > third && first > third)
-		rra(stack_a);
+	min = get_min(stack_a, -1);
+	next_min = get_min(stack_a, min);
+	case_id = 0;
+	if ((*stack_a)->index == min && (*stack_a)->next->index != next_min)
+		case_id = 1;
+	else if ((*stack_a)->index == next_min)
+		case_id = 2;
+	else
+		case_id = 3;
+	execute_sort_case(stack_a, case_id, min);
 }
 
 void	sort_4(t_list **stack_a, t_list **stack_b)
 {
-	int	min_index;
+	int	distance;
 
-	min_index = find_min_index(*stack_a);
-	bring_index_to_top(stack_a, min_index);
+	if (is_sorted(stack_a))
+		return ;
+	distance = get_distance(stack_a, get_min(stack_a, -1));
+	if (distance == 1)
+		ra(stack_a);
+	else if (distance == 2)
+	{
+		ra(stack_a);
+		ra(stack_a);
+	}
+	else if (distance == 3)
+		rra(stack_a);
+	if (is_sorted(stack_a))
+		return ;
 	pb(stack_a, stack_b);
 	sort_3(stack_a);
 	pa(stack_a, stack_b);
@@ -95,15 +100,26 @@ void	sort_4(t_list **stack_a, t_list **stack_b)
 
 void	sort_5(t_list **stack_a, t_list **stack_b)
 {
-	int	min_index;
+	int	distance;
 
-	min_index = find_min_index(*stack_a);
-	bring_index_to_top(stack_a, min_index);
+	distance = get_distance(stack_a, get_min(stack_a, -1));
+	if (distance == 1)
+		ra(stack_a);
+	else if (distance == 2)
+	{
+		ra(stack_a);
+		ra(stack_a);
+	}
+	else if (distance == 3)
+	{
+		rra(stack_a);
+		rra(stack_a);
+	}
+	else if (distance == 4)
+		rra(stack_a);
+	if (is_sorted(stack_a))
+		return ;
 	pb(stack_a, stack_b);
-	min_index = find_min_index(*stack_a);
-	bring_index_to_top(stack_a, min_index);
-	pb(stack_a, stack_b);
-	sort_3(stack_a);
-	pa(stack_a, stack_b);
+	sort_4(stack_a, stack_b);
 	pa(stack_a, stack_b);
 }

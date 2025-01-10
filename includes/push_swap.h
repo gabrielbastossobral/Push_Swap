@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabastos <gabastos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabrielsobral <gabrielsobral@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:48:32 by gabrielsobr       #+#    #+#             */
-/*   Updated: 2025/01/09 13:57:00 by gabastos         ###   ########.fr       */
+/*   Updated: 2025/01/10 13:03:36 by gabrielsobr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ int			get_max(t_list *stack);
 int			get_max_bits(int max);
 void		radix_sort(t_list **stack_a, t_list **stack_b);
 
-int			find_min_index(t_list *stack);
-void		bring_index_to_top(t_list **stack, int index);
 void		sort_3(t_list **stack_a);
 void		sort_4(t_list **stack_a, t_list **stack_b);
 void		sort_5(t_list **stack_a, t_list **stack_b);
@@ -66,7 +64,6 @@ void		ft_free(char **str);
 int			is_sorted(t_list **stack);
 void		free_stack(t_list **stack);
 int			get_distance(t_list **stack, int index);
-void		make_top(t_list **stack, int distance);
 
 void		ft_check_args(int argc, char **argv);
 
